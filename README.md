@@ -14,5 +14,5 @@ Welcome to the Food Blog Web Application! This is a simple web app where users c
 
 - **HTML**: Markup structure for the web pages.
 - **CSS**: Styling and layout of the web pages.
-- **JavaScript**: For interactivity, such as submitting recipes, handling comments, and search functionality.
+- **JavaScript**: For interactivity.
 
