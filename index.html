@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD BLOG</title>
+    <style>
+        body {
+            background-color: rgb(211, 110, 110);
+            color: rgb(255, 255, 255);
+            margin: 90;
+            padding: 90;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgb(211, 110, 110);
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        h1 {
+            float: left;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            float: right;
+            width: 40%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .introduction {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+        }
+
+        
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 30%;
+            margin: 20px 0;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            margin: 0;
+        }
+
+        
+        .websites {
+            margin: 20px 0;
+        }
+
+        .site {
+            margin-bottom: 20px;
+        }
+
+        .site-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .site-heading {
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            
+        }
+
+        .site-info,
+        .site-image {
+            width: 50%;
+            
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+
+        .site-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+       
+        @media (max-width: 768px) {
+
+            .site-info,
+            .site-image {
+                width: 100%;
+            }
+        }
+
+        
+        .history-section {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .history-rectangle {
+            width: 30%;
+            
+            box-sizing: border-box;
+            padding: 20px;
+            margin-left: 27px;
+            margin-right: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .history-rectangle img {
+            max-width: 250%;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: center;
+        }
+
+        #website {
+
+            transition: all 0.3s ease;
+        }
+
+        footer #contact {
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+
+            position: sticky;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .site-image {
+            margin-left: -23px;
+        }
+        .box-container {
+            display: flex;
+            overflow: hidden;
+            transition: transform 2s ease-in-out; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1><b>FOODY WORLD </b></h1>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#website">FOOD WEBSITES</a></li>
+                <li><a href="#history">HISTORY</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="introduction">
+        <p>Welcome to FOODY WORLD! Here you will get all the FOOD you wanna taste!</p>
+    </div>  
+
+    <div class="box-container" id="home">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\mutton biryani.jpg" alt="Hyderabadi Mutton Biryani">
+            <p> Hyderabadi mutton biryani is a classic dish made by layering rice over slow cooked mutton gravy.</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\biriyani.jpg" alt="Hyderabadi chicken biryani">
+            <p> Hyderabadi chicken biryani recipe made with Basmati rice and chicken marinated in spices. This recipe will give you the best biryani that's flavorful & delicious.  </p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\Mutton-Fry.jpg" alt="Mutton fry" width="500">
+            <p>Mutton Fry is an authentic Indian recipe, which tastes best when served with Biryani, Jeera Rice, Pulao, and can also be relished with Naan, Roti, Paratha to name a few.</p>
+        </div>
+    </div>
+    <script>
+        
+        function shiftBoxes() {
+            const boxContainer = document.querySelector('.box-container');
+            const firstBox = boxContainer.querySelector('.box');
+            boxContainer.appendChild(firstBox.cloneNode(true)); 
+            boxContainer.removeChild(firstBox); 
+        }
+
+        setInterval(shiftBoxes, 5000); 
+    </script>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\chilli chicken.jpg" alt="Chilli Chicken" width="500">
+            <p>The best Indo chinese chilli chicken appetizer made with crisp fried chicken tossed in sweet sour & spicy chilli sauce. Pair it with hot stir fried noodles or fried rice.</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\grilled fish.jpg" alt="Grilled fish">
+            <p>Grilled fish is a delicious and healthy way to enjoy fresh sea food. Grill and chill! </p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\chilly-prawn_.jpg" alt="Chilly Prawn" width="500">
+            <p>Chilli Prawn also known as Chili Shrimp is a popular Asian dish where crisp fried prawns are tossed in a spicy, hot, sweet and tangy chili sauce. </p>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\si thali.jpeg" alt="South Indian Thalli">
+            <p>The South Indian meal.
+The large platter that carries all the different dishes is the "thattu" in The southern part of India.  The thattu is made of metal, mostly stainless steel. It is at times lined with a cut banana leaf and it is delicious!</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\venpongal.jpg" alt="Ven Pongal">
+            <p>Khara or ven pongal is a rice lentil dish that is often prepared in south Indian homes to offer to GODS during puja. It is also a comfort food and is made often to enjoy with sambar or chutney.</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\idly.jpg" alt="Idly" width="500">
+            <p>Idli or idly is a type of savoury rice cake, originating from South India, popular as a breakfast food in Southern India and in Sri Lanka. The cakes are made by steaming a batter consisting of fermented black lentils (de-husked) and rice. The fermentation process breaks down the starches so that they are more readily metabolised by the body.</p>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\dosa.jpg" alt="Masala Dosa">
+            <p>Masala dosa are popular South Indian rice and lentil crepes stuffed with potato masala.</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\panner.jpg" alt="Paneer curry" width="500">
+            <p>This Dhaba style Paneer Curry is delicious, flavorsome and easy to make. Serve it with roti, paratha, naan or plain rice.</p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\poori.jpg" alt="Poori with Allu Kurma" width="500">
+            <p>Poori or Puri is a traditional Indian fried unleavened bread made with only whole wheat flour, salt, and water. Make crispy, fluffy, and soft poori to enjoy with your favorite meals.</p>
+        </div>
+    </div>
+
+<div class="box-container">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\pizza.jpg" alt="Pizza">
+            <p>Pizza is a traditional Italian dish typically consisting of a flat base of leavened wheat-based dough topped with tomato, cheese, and other ingredients, baked at a high temperature, traditionally in a wood-fired oven.</p>
+        </div>
+
+<div class="box">
+            <img src="C:\Users\Akshaya\Downloads\burger.jpg" alt="Burger">
+            <p>Burger is a dish consisting of fillings�usually a patty of ground meat,typically chicken�placed inside a sliced bun or bread roll. The patties are often served with cheese, lettuce, tomato, onion, pickles, bacon or chilis with condiments such as ketchup, mustard, mayonnaise, relish or a "special sauce" often a variation of Thousand Island dressing and are frequently placed on sesame seed buns. A burger patty topped with cheese is called a cheeseburger.</p>
+        </div>
+
+<div class="box">
+            <img src="C:\Users\Akshaya\Downloads\Screenshot_10-8-2024_132216_www.bing.com.jpeg" alt="Schezwan noodles">
+            <p>Chicken Schezwan noodles is a delicious and flavorful dish that combines succulent boneless chicken breast, fresh vegetables, and Hakka noodles with a unique blend of Indian spices, schezwan sauce, soy sauce, and vinegar.</p>
+        </div>
+
+<div class="box-container">
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\french-fries.jpg" alt="French Fry" width="500">
+            <p>french fries, side dish or snack typically made from deep-fried potatoes that have been cut into various shapes, especially thin strips. Fries are often salted and served with other items, including ketchup, mayonnaise, or vinegar. In addition, they can be topped with more substantial fare, such as chili. 
+</div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\chicken nuggets.jpg" alt="Chicken nuggets">
+            <p>A chicken nugget is a food product consisting of a small piece of deboned chicken meat that is breaded or battered, then deep-fried or baked.  </p>
+        </div>
+
+        <div class="box">
+            <img src="C:\Users\Akshaya\Downloads\Tornado-Potato.jpg" alt="Tornado potato" width="500">
+            <p>Tornado potatoes also called rotato potato, spring potato, twist potatoes, potato twisters, potato swirl, spiral potato, potato on a stick, tornado fries or (in Australia) chips on a stick, are a popular street food in South Korea.</p>
+        </div>
+    </div>
+
+    
+    <div class="box-container"
+        style="background-color: #333; border-radius: 10px; padding:10px;margin-right: 20px;margin-left: 20px;">
+        <center>
+            <h1 id="website" style="color: white;">Food Websites</h1><br>
+        </center>
+        <div class="web-sites">
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading Swiggy"><a href="https://www.swiggy.com/"
+                        target="_blank">Swiggy</a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Order food online from restaurants and get it delivered. Serving in Bangalore, Hyderabad, Delhi and more. Order Pizzas, Biryanis, from Swiggy.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="C:\Users\Akshaya\Downloads\swiggy.jpeg" alt="Swiggy Image">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading blinkit"><a href="https://blinkit.com/" target="_blank">Blinkit</a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Shop online for groceries and get your order delivered at your doorstep in minutes. Enjoy instant delivery with blinkit.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="C:\Users\Akshaya\Downloads\Screenshot_10-8-2024_135039_www.bing.com.jpeg" alt="Blinkit Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading Zepto"><a href="https://www.zeptonow.com/" target="_blank">Zepto</a></h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Zepto is your next-door quick commerce app, delivering online groceries,fruits,vegetables, personal care, electronics & much more to you in just minutes.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="C:\Users\Akshaya\Downloads\Screenshot_9-8-2024_151845_www.bing.com.jpeg" alt="Zepto Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading Zomato"><a href="https://www.zomato.com/" target="_blank">Zomato
+                        </a></h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Pizza, Burger, Sandwich, Fast Food, Street Food, Tea, Coffee, Shake. Rs.100 for one. 49 min. Order food online - Restaurants in with online ordering.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="C:\Users\Akshaya\Downloads\Screenshot_9-8-2024_15259_www.bing.com.jpeg" alt="Zomato Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading Yummly"><a href="https://www.yummly.com/" target="_blank">Yummly
+                        </a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>The smart cooking sidekick that learns what you like and customizes the experience to your personal tastes, nutritional needs, skill level, and more.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="C:\Users\Akshaya\Downloads\yummly.jpeg" alt="Yummly Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="history-section" id="history">
+        <div class="history-rectangle">
+            <h2>South Indian Thali History</h2>
+            <p>The South Indian Thali is believed to have originated in the royal kitchens of the ancient kingdoms of South India. It was initially served to the kings and queens as a grand feast, showcasing the culinary prowess of the royal chefs. Over time, the thali meal became more accessible to the common people and evolved into a popular dining experience.</p>
+            <div class="site-image">
+                <img src="C:\Users\Akshaya\Downloads\thalli.jpg" alt="South Indian thali Image" autoplay loop controls height="250" width="320"></img scr>
+            </div>
+        </div>
+
+        <div class="history-rectangle">
+            <h2>Non-Vegetarian food History</h2>
+            <p> Non-vegetarian food contains meat (red meat, poultry, seafood, or the flesh of any other animal), and sometimes, eggs. The term is common in India, but not usual elsewhere. In the generally vegetarian environment of India, restaurants offering meat and fish usually have a "non-vegetarian" section of their menu, and may include the term (typically as "Veg and Non-veg") in their name-boards and advertising. 
+
+The diet, non-vegetarianism is the majority human diet in the world (including India). Non-vegetarians are also called omnivores in nutritional science.
+
+            <div class="site-image">
+                <img src="C:\Users\Akshaya\Downloads\non veg.jpg" alt="Non-Vegetarian" width="350">
+            </div>
+        </div>
+
+        <div class="history-rectangle">
+            <h2>Fast food History</h2>
+
+            Fast food history is longer than the history of fast food restaurants. Some fast food standards began as traditional cuisine or food of poor people, only to become the food of the masses that people enjoy.
+            <br>
+            <div class="site-image">
+                <img src="D:\food 1.jpg"  alt="Fast food" width="370" style="margin-top: 40px;" >
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div id="about" class="box-container"
+        style="background-color: #333; border-radius: 8px; padding: 20px; margin: 20px;">
+        <h1 style="color: rgb(211, 110, 110);">About Foody World</h1>
+        <p style="color: white;">
+            Foody World is your ultimate destination for all the food you wanna taste. We
+            strive to bring you comprehensive coverage of the foody world, where you will get the stories
+            behind each dishes. Whether it's the excitement of tasting and go into the history, FoodyWorld is your go-to source for every food.
+        </p>
+    </div>
+    
+    <footer id="contact">
+        <div>Contact Details:</div>
+        <p>Email: aka@foodyworld.com</p>
+        <p>Phone: +91 9188727635</p>
+        <p>All rights reserved &copy; 2023 Foody World</p>
+    </footer>
+</body>
+
+</html>
+
+
